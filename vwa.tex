@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 % \usepackage{fancyhdr}
 \usepackage[authordate, backend=biber]{biblatex-chicago}
-\usepackage{ngerman}
+\usepackage[ngerman]{babel}
 \usepackage{eso-pic}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, lmargin=3.5cm, rmargin=2cm]{geometry}
@@ -11,8 +11,8 @@
 \hypersetup{colorlinks=true, allcolors=black}
 
 % Definition der Zitierregeln. Verwendung mit \izit und \wzit fuer inhaltliche bzw. woertliche Zitate
-\newcommand{\izit}[2]{(vgl. \cite{#1}, #2)}
-\newcommand{\wzit}[2]{(\cite{#1}, #2)}
+\newcommand{\izit}[2][]{(vgl. \cite{#2}\if#1\empty\else, #1\fi)}
+\newcommand{\wzit}[2][]{(\cite{#2}\if#1\empty\else, #1\fi)}
 % Der Abstract muss wie eine normale Überschrift formatiert sein, darf
 % jedoch nicht nummeriert sein
 \renewcommand{\abstract}{\section*{Abstract}}
@@ -34,13 +34,13 @@
 \clearpage
 
 \section{Test der Zitate}
-Wörtliches Zitat: \wzit{panganos14}{5} \\
-Inhaltliches Zitat: \izit{panganos14}{10}
+Wörtliches Zitat: \wzit[10]{panganos14} \\
+Inhaltliches Zitat: \izit[10]{panganos14}
 
 \section{Beispielabbildungen}
 \begin{figure}[h!]
     \includegraphics[width=0.8\textwidth]{logo.png}
-    \caption{Tolles Logo des Wiedner Gymnasiums / der Sir Karl Popper Schule \wzit{author_fig}{}}
+    \caption{Tolles Logo des Wiedner Gymnasiums / der Sir Karl Popper Schule \wzit{author_fig}}
 \end{figure}
 
 \section{Beispieltabelle}
