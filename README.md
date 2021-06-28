@@ -1,5 +1,5 @@
 # VWA-template
-A LaTeX template to be used at Austrian High School final projects.
+A LaTeX template to be used in Austrian High School final projects.
 
 # Requirements
 You will need a biblatex file to be able to cite ressources. It is recommended to use Zotero and the Better-Biblatex-plugin to automatically keep your bibliography up-to-date.
