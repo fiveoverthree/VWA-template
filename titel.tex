@@ -1,0 +1,41 @@
+
+\newgeometry{top=2cm, bottom=2cm}
+
+% To make the logo work
+\newcommand\AtPageUpperRight[1]{\AtPageUpperLeft{%
+   \makebox[0.9\paperwidth][r]{#1}}}
+
+\begin{titlepage}
+    \AddToShipoutPictureBG*{%
+    \AtPageUpperRight{\raisebox{-2\height}{
+        \includegraphics[width=5cm]{logo.png}
+    }}}
+
+    \begin{center}
+        \vspace*{1cm}
+
+        \large{Vorwissenschaftliche Arbeit im Rahmen der Reifeprüfung}
+
+        \vspace*{8cm}
+        \huge{\textbf{Titel}}
+
+        \LARGE{\textbf{Author}}
+
+        \large{Klasse Jahr}
+
+        \vfill
+
+        Bundesgymnasium und Bundesrealgymnasium Wien 4 \\
+        Wiedner Gymnasium/Sir Karl Popper Schule \\
+        A-1040 Wien, Wiedner Gürtel 68
+
+        \vspace*{0.5cm}
+
+        Betreuungslehrperson: Titel Vorname Nachname
+
+        \vspace*{0.5cm}
+        Vorgelegt am tt.mm.jjjj
+
+    \end{center}
+\end{titlepage}
+\restoregeometry
