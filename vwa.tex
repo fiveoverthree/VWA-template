@@ -1,9 +1,9 @@
 \documentclass[12pt]{article}
 \usepackage{tikz}
 \usepackage{graphicx}
-% \usepackage{fancyhdr}
 \usepackage[authordate, backend=biber]{biblatex-chicago}
-\usepackage[ngerman]{babel}
+% \usepackage[ngerman]{babel}
+\usepackage[german]{babel}
 \usepackage{eso-pic}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, lmargin=3.5cm, rmargin=2cm]{geometry}
@@ -28,9 +28,17 @@
 % titel.tex die entsprechenden Werte geändert werden
 \include{titel.tex}
 
+% Nummerierung zuerst mit roemischen Zahlen, danach mit
+% arabischen
+\pagenumbering{roman}
+\setcounter{page}{2}
+
 \abstract
 \clearpage
 \tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\section{Einleitung}
 \clearpage
 
 \section{Test der Zitate}
@@ -39,6 +47,7 @@ Inhaltliches Zitat: \izit[10]{panganos14}
 
 \section{Beispielabbildungen}
 \begin{figure}[h!]
+    \centering
     \includegraphics[width=0.8\textwidth]{logo.png}
     \caption{Tolles Logo des Wiedner Gymnasiums / der Sir Karl Popper Schule \wzit{author_fig}}
 \end{figure}
