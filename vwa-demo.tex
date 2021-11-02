@@ -10,13 +10,6 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, allcolors=black}
 
-% Definition der Zitierregeln. Verwendung mit \izit und \wzit fuer inhaltliche bzw. woertliche Zitate
-\newcommand{\izit}[2][]{(vgl. \cite{#2}\if#1\empty\else, #1\fi)}
-\newcommand{\wzit}[2][]{(\cite{#2}\if#1\empty\else, #1\fi)}
-% Der Abstract muss wie eine normale Überschrift formatiert sein, darf
-% jedoch nicht nummeriert sein
-\renewcommand{\abstract}{\section*{Abstract}}
-
 % Hinzufügen der Quellen
 % Fuer eine einfachere Verwendung ist es empfehlenswert diese Datei mithilfe
 % von Zotero & /betterbiblatex auf dem neuesten Stand zu halten
