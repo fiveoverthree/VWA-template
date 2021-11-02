@@ -20,7 +20,7 @@ Possible options are:
 * `\newcommand{\klasse}{Klasse}`
 * `\newcommand{\jahr}{Jahr}`
 * `\newcommand{\vorlagedatum}{tt.mm.jjjj}`
-* `\newcommand{\schulinfo}{`
+* `\newcommand{\schulinfo}{}`
 
 # Citation style
 This template uses the Chicago manual of style and uses new commands for analogous/literal citation. New citiation styles could be added with relatively little effort.
