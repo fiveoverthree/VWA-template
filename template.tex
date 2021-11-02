@@ -1,0 +1,75 @@
+% Definition der Zitierregeln. Verwendung mit \izit und \wzit fuer inhaltliche bzw. woertliche Zitate
+\newcommand{\izit}[2][]{(vgl. \cite{#2}\if#1\empty\else, #1\fi)}
+\newcommand{\wzit}[2][]{(\cite{#2}\if#1\empty\else, #1\fi)}
+% Der Abstract muss wie eine normale Überschrift formatiert sein, darf
+% jedoch nicht nummeriert sein
+\renewcommand{\abstract}{\section*{Abstract}}
+
+\newgeometry{top=2cm, bottom=2cm}
+
+% To make the logo work
+\newcommand\AtPageUpperRight[1]{\AtPageUpperLeft{%
+   \makebox[0.9\paperwidth][r]{#1}}}
+
+%overwrite when importing to change Title
+\ifdef{\VWAtitel}{}{
+    \newcommand{\VWAtitel}{Titel}
+}
+\ifdef{\VWAauthor}{}{
+    \newcommand{\VWAauthor}{Author}
+}
+\ifdef{\logo}{}{
+    \newcommand{\logo}{logo.png}
+}
+\ifdef{\klasse}{}{
+    \newcommand{\klasse}{Klasse}
+}
+\ifdef{\jahr}{}{
+    \newcommand{\jahr}{Jahr}
+}
+\ifdef{\vorlagedatum}{}{
+    \newcommand{\vorlagedatum}{tt.mm.jjjj}
+}
+\ifdef{\schulinfo}{}{
+    \newcommand{\schulinfo}{
+    Bundesgymnasium und Bundesrealgymnasium Wien 4 \\
+    Wiedner Gymnasium/Sir Karl Popper Schule \\
+    A-1040 Wien, Wiedner Gürtel 68
+    }
+}
+\ifdef{\betreuungslehrperson}{}{
+    \newcommand{\betreuungslehrperson}{Titel Vorname Nachname}
+}
+
+\begin{titlepage}
+    \AddToShipoutPictureBG*{%
+    \AtPageUpperRight{\raisebox{-2\height}{
+        \includegraphics[width=5cm]{\logo}
+    }}}
+
+    \begin{center}
+        \vspace*{1cm}
+
+        \large{Vorwissenschaftliche Arbeit im Rahmen der Reifeprüfung}
+
+        \vspace*{8cm}
+        \huge{\textbf{\VWAtitel}}
+
+        \LARGE{\textbf{\VWAauthor}}
+
+        \large{\klasse \jahr}
+
+        \vfill
+
+        \schulinfo
+
+        \vspace*{0.5cm}
+
+        Betreuungslehrperson: \betreuungslehrperson
+
+        \vspace*{0.5cm}
+        Vorgelegt am \vorlagedatum
+
+    \end{center}
+\end{titlepage}
+\restoregeometry
