@@ -1,3 +1,20 @@
+% in order to make figure citations easier.
+\newcommand{\citedfigure}[5][]{
+	\begin{figure}[H]
+	\centering
+	#4
+	\caption[\allowdisplaybreaks\placeholdername{\citationtext[#1]{#2}}]{#3}
+	\label{#5}
+\end{figure}}
+\newcommand{\citationtext}[2][]{\ifthenelse{\equal{#1}{}}{Eigene Abbildung}{\fullcite{#2}. #1.}}
+\newcommand{\placeholdername}[1][]{#1}
+
+% outline quotes
+\renewenvironment{quote}{\list{}{\rightmargin20pt\leftmargin20pt}\item\relax
+	\small}{\endlist}
+\SetBlockEnvironment{quote}
+
+
 % Definition der Zitierregeln. Verwendung mit \izit und \wzit fuer inhaltliche bzw. woertliche Zitate
 \newcommand{\izit}[2][]{\ifthenelse{\equal{#1}{}}{(vgl. \cite{#2})}{(vgl. \cite{#2}, #1)}}
 \newcommand{\wzit}[2][]{\ifthenelse{\equal{#1}{}}{(\cite{#2})}{(\cite{#2}, #1)}}
