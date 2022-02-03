@@ -9,6 +9,16 @@
 \usepackage[a4paper, lmargin=3.5cm, rmargin=2cm]{geometry}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, allcolors=black}
+%Allow editing of TOF and TOT
+\usepackage{tocloft}
+
+% Change Style of bibliography
+\renewcommand\cftfigpresnum{Abbildung }
+\renewcommand\cftfigaftersnum{:}
+% disabling dots \renewcommand{\cftfigleader}{\hfill}
+\setlength{\cftfignumwidth}{7em}
+\setlength{\cftfigindent}{0em}
+\setlength{\cftbeforefigskip}{8pt}
 
 % Hinzufügen der Quellen
 % Fuer eine einfachere Verwendung ist es empfehlenswert diese Datei mithilfe
@@ -39,11 +49,7 @@ Wörtliches Zitat: \wzit[10]{panganos14} \\
 Inhaltliches Zitat: \izit[10]{panganos14}
 
 \section{Beispielabbildungen}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{logo.png}
-    \caption{Tolles Logo des Wiedner Gymnasiums / der Sir Karl Popper Schule \wzit{author_fig}}
-\end{figure}
+\citedfigure[20]{falconerfractal}{Dies ist die Bildunterschrift}{\includegraphics[width=0.8\textwidth]{logo.png}}{test}
 
 \section{Beispieltabelle}
 \begin{table}[h!]
