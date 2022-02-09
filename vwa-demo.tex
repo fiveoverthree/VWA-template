@@ -10,7 +10,14 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, allcolors=black}
 %Allow editing of TOF and TOT
-\usepackage{tocloft}
+\usepackage[titles]{tocloft}
+\usepackage{tocbibind}
+
+% make Abbildungsverzeichnis have a section number
+\renewcommand{\listoffigures}{\begingroup
+	\tocsection
+	\tocfile{\listfigurename}{lof}
+\endgroup}
 
 % Hinzufügen der Quellen
 % Fuer eine einfachere Verwendung ist es empfehlenswert diese Datei mithilfe
