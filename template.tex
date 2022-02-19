@@ -15,7 +15,7 @@
 	\caption[\allowdisplaybreaks\placeholdername{\citationtext[#1]{#2}}]{#3}
 	\label{#5}
 \end{figure}}
-\newcommand{\citationtext}[2][]{\ifthenelse{\equal{#1}{}}{Eigene Abbildung}{\fullcite{#2}. #1.}}
+\newcommand{\citationtext}[2][]{\ifthenelse{\equal{#2}{}}{Eigene Abbildung}{\fullcite{#2}. #1.}}
 \newcommand{\placeholdername}[1][]{#1}
 
 % outline quotes
